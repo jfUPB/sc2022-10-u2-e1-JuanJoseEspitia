@@ -38,22 +38,19 @@ void getArray(struct array *parr)
 {
     int ArraySize1;
     scanf("%d" ,&ArraySize1);
+    parr->size=ArraySize1;
     int arr1[ArraySize1];
+    parr->pdata = malloc(sizeof(int)*parr->size);
 
     for(int i = 0;i<ArraySize1;i++){
         int num;
         scanf("%d" ,&num);
         arr1[i]=num;
+        parr->pdata[i]=arr1[i];
+
     }
 
-    int ArraySize2;
-    scanf("%d" ,&ArraySize2);
-    int arr2[ArraySize2];
-    for(int i = 0;i<ArraySize2; i++){
-        int num;
-        scanf("%d" ,&num);
-        arr2[i]=num;
-    }
+
 }
 
 void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOut)
