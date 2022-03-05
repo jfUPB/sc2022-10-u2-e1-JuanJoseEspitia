@@ -65,7 +65,7 @@ void arrayCommon(struct array *arrIn1, struct array *arrIn2, struct array *arrOu
          for(int j = 0; j<arrIn2->size;j++){
              if((arrIn1->pdata+i)==(arrIn2->pdata+j)){
                  for(int k = 0; k<lugar;k++){
-                     if((arrOut->pdata+k) == *(arrIn1->pdata+i)){
+                     if(*(arrOut->pdata+k) == *(arrIn1->pdata+i)){
                      guardar = 1;
                      }
                  }
